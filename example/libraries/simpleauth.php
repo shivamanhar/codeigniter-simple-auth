@@ -101,8 +101,8 @@ class SimpleAuth {
         // Create session
         $CI->load->library('session');
         
-        $CI->session->set_userdata('authenticated_admin' , TRUE);
-        $CI->session->set_userdata('username_admin', $username);
+        $CI->session->set_userdata('simpleauth_auth' , TRUE);
+        $CI->session->set_userdata('simpleauth_user', $username);
 
         // Return success array
         return array('success' => true, 'log_entrace' => $logged_used, 'code' => 10);
@@ -116,9 +116,9 @@ class SimpleAuth {
     	$CI =& get_instance();
     	$CI->load->library('session');
 
-        $user = $CI->session->userdata('username_admin');
+        $user = $CI->session->userdata('simpleauth_user');
 
-    	return ( $CI->session->userdata('authenticated_admin') && !empty($user));
+    	return ( $CI->session->userdata('simpleauth_auth') && !empty($user));
     }
 
     /**
@@ -129,8 +129,8 @@ class SimpleAuth {
     	$CI =& get_instance();
     	$CI->load->library('session');
 
-    	$CI->session->unset_userdata('authenticated_admin');
-        $CI->session->unset_userdata('username_admin');
+    	$CI->session->unset_userdata('simpleauth_auth');
+        $CI->session->unset_userdata('simpleauth_user');
 
         return true;
     }

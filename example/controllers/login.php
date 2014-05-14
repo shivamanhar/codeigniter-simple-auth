@@ -26,7 +26,7 @@ class Login extends CI_Controller{
 		// Do not encrypt password
 
 		// Runs authentication
-		$auth = $this->auth->authenticate($username, $password);
+		$auth = $this->simpleauth->authenticate($username, $password);
 
 		// Conditional to success or failure
 		if ($auth['success']){
@@ -43,7 +43,7 @@ class Login extends CI_Controller{
 	}
 
 	public function dologout(){
-		$this->auth->un_auth();
+		$this->simpleauth->un_auth();
 		redirect('/login');
 	}
 }

@@ -175,7 +175,7 @@ class SimpleAuth {
         $CI =& get_instance();
 
         $data = array(
-            'date'        => 'NOW()',
+            'date'        => date('Y-m-d H:i:s'),
             'ip'          => $_SERVER['REMOTE_ADDR'],
             'admin_user'  => $username
         );

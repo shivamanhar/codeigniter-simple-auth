@@ -70,7 +70,7 @@ class SimpleAuth {
         // Check if user exists
         $user_id = $this->get_user_id($username);
         if (!$user_id){
-            return array('success' => false, 'code' => 01, 'message' => 'User not found.');
+            return array('success' => false, 'code' => 01, 'message' => $CI->config->item('error_01', 'simpleauth'));
         }            
 
         // Get user password
@@ -90,7 +90,7 @@ class SimpleAuth {
 
         // Compare passwords
         if ($password != $compare_password){
-            return array('success' => false, 'code' => 02, 'message' => 'Invalid password or username.');
+            return array('success' => false, 'code' => 02, 'message' => $CI->config->item('error_02', 'simpleauth'));
         }            
 
         // Log insert
@@ -105,7 +105,7 @@ class SimpleAuth {
         $CI->session->set_userdata('simpleauth_user', $username);
 
         // Return success array
-        return array('success' => true, 'log_entrace' => $logged_used, 'code' => 10);
+        return array('success' => true, 'log_record' => $logged_used, 'code' => 10);
     }
 
     /**

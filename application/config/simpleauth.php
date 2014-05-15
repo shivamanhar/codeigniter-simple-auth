@@ -54,7 +54,7 @@ $config['user_password_encrypt'] = MCRYPT_RIJNDAEL_128;
 
 /*
 |--------------------------------------------------------------------------
-| Singin log table (Optional, leave blank if not necessary)
+| Signin log table (Optional, leave blank if not necessary)
 |--------------------------------------------------------------------------
 |
 | Table that stores log of successful users signin.
@@ -75,3 +75,18 @@ $config['userlog_table']		= "manager_userlog";
 $config['userlog_user_column'] 	= "admin_user";
 $config['userlog_ip_column'] 	= "ip";
 $config['userlog_date_column']	= "date";
+
+/*
+|--------------------------------------------------------------------------
+| Messages
+|--------------------------------------------------------------------------
+|
+| String values of error messages with based on
+| error codes.
+| 
+|	'error_01'		= User not found in table
+|	'error_02'		= User found but invalid password
+*/
+
+$config['error_01'] 	= "User does not exists";
+$config['error_02'] 	= "Invalid user or password";

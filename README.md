@@ -85,6 +85,7 @@ These arrays are:
 
 
 ** User does not exists **
+
 `
 [
 	'success'	=> false,
@@ -94,6 +95,7 @@ These arrays are:
 `
 
 ** Invalid password **
+
 `
 [
 	'success'	=> false,
@@ -103,6 +105,7 @@ These arrays are:
 `
 
 ** Successfully signed in **
+
 `
 [
 	'success'		=> true,

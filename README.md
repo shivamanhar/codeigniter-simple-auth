@@ -60,12 +60,15 @@ It simply adds a record to a table containing username of user logged, IP receiv
 + 02 = User found but invalid password
 
 `$config['error_01'] 	= "User does not exists";`
+
 `$config['error_02'] 	= "Invalid user or password";`
 
 Details
 -----------------------
 This library adds two session values:
+
 `simpleauth_auth` 	= Boolean value if user is logged or not;
+
 `simpleauth_user` 	= String value of username or `user_username_column` value.
 
 SimpleAuth DOES NOT sanitize inputted values. You must check and validate `$username` and `$password` BEFORE calling `$this->simpleauth->authenticate($username, $password);`
@@ -84,7 +87,8 @@ Returns a array with values of success or failure to signin.
 These arrays are:
 
 
-** User does not exists **
+**User does not exists**
+
 `
 [
 	'success'	=> false,
@@ -93,7 +97,8 @@ These arrays are:
 ]
 `
 
-** Invalid password **
+**Invalid password**
+
 `
 [
 	'success'	=> false,
@@ -102,7 +107,8 @@ These arrays are:
 ]
 `
 
-** Successfully signed in **
+**Successfully signed in**
+
 `
 [
 	'success'		=> true,

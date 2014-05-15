@@ -87,7 +87,7 @@ Returns a array with values of success or failure to signin.
 These arrays are:
 
 
-** User does not exists **
+*** User does not exists ***
 
 `
 [
@@ -97,7 +97,7 @@ These arrays are:
 ]
 `
 
-** Invalid password **
+*** Invalid password ***
 
 `
 [
@@ -107,7 +107,7 @@ These arrays are:
 ]
 `
 
-** Successfully signed in **
+*** Successfully signed in ***
 
 `
 [
